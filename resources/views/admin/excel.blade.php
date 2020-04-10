@@ -22,6 +22,5 @@
         </div>
         <button type="submit">Upload File</button>
     <a href="{{ url('/sample/student.xlsx') }}">Télécharger le fichier</a>
-    </form>
 
 @endsection

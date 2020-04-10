@@ -5,11 +5,11 @@
   <div class="card mb-3 rounded-0 card__hover" >
     <div class="row d-flex">
       <div class="col-md-4">
-          @if ($item->image)
+          {{-- @if ($item->image)
               <img src="{{ asset('storage/' .$item->image) }}" class="img-fluid" alt="" srcset="">
-          @else
-      <img src="{{ asset('images/build.jpg') }}" class="img-fluid" alt="" srcset="">
-          @endif
+          @else --}}
+      <img src="http://placehold.it/250" class="img-fluid" alt="" srcset="">
+          {{-- @endif --}}
       </div>
 
       <div class="col-md-8 mt-n4">

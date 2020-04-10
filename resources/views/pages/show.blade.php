@@ -121,20 +121,6 @@
         }
 
 
-
-
-
-
-        /* #b1 { background: url('images/archive.jpg') }
-#b2 { background: url('images/cloture.jpg'); }
-#b3 { background: hsl(60, 50%, 50%); }
-#b4 { background: hsl(90, 50%, 50%); }
-#b5 { background: hsl(12, 50%, 50%); }
-#b6 { background: hsl(150, 50%, 50%); }
-#b7 { background: hsl(180, 50%, 50%); }
-#b8 { background: hsl(210, 50%, 50%); }
-#b9 { background: hsl(240, 50%, 50%); }
-#b10 { background: hsl(270, 50%, 50%); } */
 </style>
 {{-- Navigation and header --}}
     <div class="container-fluid bg-dark h-100 top__header">
@@ -152,10 +138,7 @@
     @include('includes.content')
     {{-- .<div class="container-fluid">
       
-    </div> --}}
-{{-- Carousel --}}
-
-    
+   
    {{-- end navigation --}}
 
 <div class="container  my-3">
@@ -244,7 +227,7 @@
                   
                 </div>
                 <div class="float-right">
-                  <a href="#print" >
+                  <a href="javascript:window.print()" >
                   <i class="fa fa-print text-warning fa-2x" aria-hidden="true"></i>
                   </a>
                 </div>
@@ -279,8 +262,7 @@
                 <form action="{{ route('news.delete', $news) }}" id="delete" method="POST">
                   @csrf
                   @method('DELETE')
-                       {{-- <td><button type="submit" href="#" class="btn btn-outline-warning btn-sm">Supprimer</button></td>
-                       <a href="#" onclick="document.getElementById('logout').submit()">LOGOUT</a> --}}
+                     
                        <a href="#" class="btn btn-outline-danger px-3 py-2 " onclick="document.getElementById('delete').submit()">Supprimer</a>
                 </form>
                 
@@ -298,25 +280,6 @@
   {{-- Footer include --}}
     @include('includes.footer')
 
-    <script>
-    //       function run(interval, frames) {
-    //   var int = 1;
-
-    //   function func() {
-    //     document.body.id = "b" + int;
-    //     int++;
-    //     if (int === frames) {
-    //       int = 1;
-    //     }
-    //   }
-
-    //   var swap = window.setInterval(func, interval);
-    // }
-
-    // run(1000, 10); //milliseconds, frames
-
-    
-    </script>
     
   <script>
     document.getElementById("button").addEventListener("click", function () {
@@ -339,19 +302,6 @@
 
    
   </script>
-{{-- 
-  <script>
-        $(document).ready(function () {
-            var arrow = $(".arrow__up");
-            var form = $(".fac__form");
-            var status = false;
-
-            $("#fac").click(function(event){
-              event.preventDefault();
-              alert(0);
-            })
-        })
-  </script> --}}
 
   @yield('extra-js')
 <script src="{{ asset('public/js/nav.js') }}"></script>
